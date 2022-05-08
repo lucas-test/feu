@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Fire, walk with me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <canvas tabindex='1' id="main"></canvas>
+    <div id="params">
+        Propagation <input type="range" id="param_proba_propagation" min="0" max="1" step="0.01"
+            onchange="change_param(this.id, this.value)">
+        <span id="param_proba_propagation_span"></span>
+        <br>
+        Extinction : n <input type="range" id="param_proba_extinction_n" min="1" max="100" step="1"
+            onchange="change_param(this.id, this.value)">
+        <span id="param_proba_extinction_n_span"></span>
+        <br>
+        Extinction : p <input type="range" id="param_proba_extinction_p" min="0" max="1" step="0.01"
+            onchange="change_param(this.id, this.value)">
+        <span id="param_proba_extinction_p_span"></span>
+        <br>
+        Régénération : n <input type="range" id="param_proba_regeneration_n" min="1" max="100" step="1"
+            onchange="change_param(this.id, this.value)">
+        <span id="param_proba_regeneration_n_span"></span>
+        <br>
+        Régénération : p <input type="range" id="param_proba_regeneration_p" min="0" max="1" step="0.01"
+            onchange="change_param(this.id, this.value)">
+        <span id="param_proba_regeneration_p_span"></span>
+        <br>
+        Speed <input type="range" id="param_speed" min="0" max="1" step="0.01"
+            onchange="change_param(this.id, this.value)">
+        <span id="param_speed_span"></span>
+        <br>
+        Clear <input type="text" id="param_print_clear" maxlength="1" size="1"
+            onchange="change_param(this.id, this.value)">
+        Fire <input type="text" id="param_print_fire" maxlength="1" size="1"
+            onchange="change_param(this.id, this.value)">
+        Out <input type="text" id="param_print_out" maxlength="1" size="1" onchange="change_param(this.id, this.value)">
+        <br>
+        <br>
+        <h3>Image burner</h3>
+        <input type="file" id="myFile"></input>
+        <br>
+        Seuil contraste : <input type="range" id="param_ib_threshold" min="0" max="1" step="0.01"
+            onchange="change_param(this.id, this.value)">
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
